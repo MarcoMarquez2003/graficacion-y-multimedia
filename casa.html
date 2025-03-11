@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #cfe2f3; 
+        }
+        canvas {
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="casa" width="600" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById('casa');
+        const ctx = canvas.getContext('2d');
+
+        function dibujarCasa() {
+            ctx.fillStyle = '#87CEEB'; 
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#228B22';
+            ctx.fillRect(0, 380, canvas.width, 120);
+
+            ctx.fillStyle = '#D3D3D3';
+            ctx.fillRect(250, 400, 100, 60); 
+
+            ctx.fillStyle = '#F4A300'; 
+            ctx.fillRect(150, 200, 300, 180);
+
+            ctx.fillStyle = '#8B0000'; 
+            ctx.beginPath();
+            ctx.moveTo(120, 200);
+            ctx.lineTo(300, 100);  
+            ctx.lineTo(480, 200);  
+            ctx.closePath();
+            ctx.fill();
+
+            ctx.fillStyle = '#8B4513'; 
+            ctx.fillRect(250, 280, 100, 100);
+            ctx.fillStyle = '#ADD8E6'; 
+            ctx.fillRect(180, 230, 60, 60); 
+            ctx.fillRect(360, 230, 60, 60); 
+
+            ctx.fillStyle = '#FFFF00'; 
+            ctx.beginPath();
+            ctx.arc(290, 330, 5, 0, 2 * Math.PI); 
+            ctx.fill();
+
+            ctx.fillStyle = '#A52A2A';  
+            ctx.fillRect(150, 200, 300, 20);
+            ctx.fillStyle = '#8B4513';  
+            ctx.fillRect(390, 120, 30, 60); 
+            ctx.beginPath();
+            ctx.moveTo(390, 120);
+            ctx.lineTo(420, 120);
+            ctx.lineTo(405, 100);  
+            ctx.closePath();
+            ctx.fill();
+            ctx.fillStyle = '#228B22'; 
+            ctx.beginPath();
+            ctx.arc(90, 330, 40, 0, 2 * Math.PI); 
+            ctx.fill();
+
+            ctx.fillStyle = '#228B22'; 
+            ctx.beginPath();
+            ctx.arc(90, 280, 50, 0, 2 * Math.PI); 
+            ctx.fill();
+            ctx.fillStyle = '#8B4513';
+            ctx.fillRect(70, 330, 40, 60);
+            ctx.fillStyle = '#228B22';
+            ctx.beginPath();
+            ctx.arc(510, 300, 40, 0, 2 * Math.PI); 
+            ctx.fill();
+            ctx.fillStyle = '#8B4513';
+            ctx.fillRect(490, 330, 40, 60);
+        }
+        dibujarCasa();
+    </script>
+
+</body>
+</html>
